@@ -34,7 +34,13 @@ function Header({ setSelectedDate, selectedDate, setEvent }) {
           className="header--date--picker"
           type="month"
           value={selectedDate.format("YYYY-MM-DD").slice(0, 7)}
-          onChange={(e) => setSelectedDate(dayjs(e.target.value))}
+          onChange={(e) => {setSelectedDate(dayjs(e.target.value))
+            localStorage.setItem(
+              "DATE",
+              JSON.stringify(
+                dayjs(e.target.value)
+              )
+            );}}
         />
         <button
           className="header--date--switcher header--date--switcher__more"
