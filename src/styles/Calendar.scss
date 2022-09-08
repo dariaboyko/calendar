@@ -1,0 +1,125 @@
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 80vh;
+  gap: 9px;
+  margin: 0 40px;
+}
+.content--day {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  padding: 10px;
+  li {
+    padding: 2px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+}
+.content--day__info {
+  display: flex;
+  justify-content: space-between;
+}
+.content--day__current {
+  background-color: rgb(212, 253, 230);
+}
+.content--day__previous {
+  opacity: 0.6;
+}
+.header--date {
+  position: relative;
+  width: 165px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.header--date--switcher {
+  position: absolute;
+  border: 0;
+  background-color: transparent;
+  left: 0;
+  z-index: 3;
+  margin: 2px 0 0 0;
+}
+.header--date--switcher__more {
+  left: auto;
+  right: 13px;
+}
+.header--date--picker {
+  position: absolute;
+  border: 0;
+  width: 165px;
+  padding: 0 0 0 20px;
+}
+.header--addevent {
+  border: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  background-color: transparent;
+}
+.creator__wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+}
+.creator {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  textarea {
+    max-width: 360px;
+    min-height: 170px;
+    border: 1px solid rgb(180, 179, 179);
+  }
+  input {
+    border: 0;
+    border-bottom: 1px solid rgb(180, 179, 179);
+  }
+}
+.button__close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    padding: 0 0 0 1px;
+    border: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.button__submit{
+    width: 80px;
+    font-size: 18px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(79, 156, 79);
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
